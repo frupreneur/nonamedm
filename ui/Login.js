@@ -14,8 +14,10 @@ export default function Login({ addDocument }) {
       await addDocument(inputValue, { name: inputValue, messages: [] });
       setButtonText("Get Started");
       router.push("/inbox");
+    } else {
+      setButtonText("Error: Input Name");
     }
-    setButtonText("Error: Input Name");
+
     setTimeout(() => {
       setButtonText("Get Started");
     }, 1000);
