@@ -13,7 +13,7 @@ export default function Header() {
         <Link href="/">
           <h1 className="logo-text">NoNameDM</h1>
           <p style={{ fontSize: "small", margin: 0, fontStyle: "italic" }}>
-            Free Anonymous Messaging
+            Anonymous Secret Messages
           </p>
         </Link>
       </div>

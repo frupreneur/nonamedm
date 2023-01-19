@@ -20,7 +20,7 @@ export default function Login({ addDocument }) {
 
     setTimeout(() => {
       setButtonText("Get Started");
-    }, 1000);
+    }, 3000);
   };
 
   return (

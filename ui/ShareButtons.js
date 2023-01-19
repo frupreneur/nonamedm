@@ -43,7 +43,11 @@ export default function ShareButtons() {
           readOnly
         />
         <div className="share-buttons">
-          <Link href="/" className="share-button wa">
+          <Link
+            href={`https://api.whatsapp.com/send?text=Write a *secret anonymous message* for me…🙂  I *won't know* who wrote it. ${link}`}
+            target="_blank"
+            className="share-button wa"
+          >
             <FaWhatsapp style={{ fontSize: "1.5rem" }} />{" "}
             <span> Share on WhatsApp</span>
           </Link>
