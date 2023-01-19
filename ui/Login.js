@@ -12,7 +12,6 @@ export default function Login({ addDocument }) {
     if (loginRef.current.value) {
       let inputValue = loginRef.current.value.replace(/[^a-zA-Z0-9]/g, "");
       await addDocument(inputValue, { name: inputValue, messages: [] });
-      setButtonText("Get Started");
       router.push("/inbox");
     } else {
       setButtonText("Error: Input Name");
@@ -20,7 +19,7 @@ export default function Login({ addDocument }) {
 
     setTimeout(() => {
       setButtonText("Get Started");
-    }, 3000);
+    }, 1000);
   };
 
   return (
