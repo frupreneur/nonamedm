@@ -60,7 +60,7 @@ export default function ShareButtons() {
             <span> {`Send WhatsApp Message`}</span>
           </Link>
           <Link
-            href={`${link}`}
+            href={`https://web.facebook.com/share.php?u=${link}`}
             target="_blank"
             className="share-button fb"
           >
