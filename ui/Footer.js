@@ -27,16 +27,16 @@ export default function Footer() {
         think about you. With the help of NoNameDM, you can send and receive
         anonymous compliments easily for free!
       </p>
-      <span
+      {/* <span
         style={{ letterSpacing: "3px", color: "#3ECFE1", cursor: "pointer" }}
         onClick={installApp}
       >{`Install App`}</span>
-      {" | "}
+      {" | "} */}
 
       <Link
         href="/disclaimer"
         style={{ letterSpacing: "3px", color: "#3ECFE1" }}
-      >{`Disclaimer`}</Link>
+      >{`--> Disclaimer <--`}</Link>
     </footer>
   );
 }
