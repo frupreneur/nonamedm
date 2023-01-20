@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,6 +10,8 @@ export default function Footer() {
         think about you. With the help of NoNameDM, you can send and receive
         anonymous compliments easily for free!
       </p>
+
+      <Link href="/disclaimer" style={{letterSpacing: "3px", color: "#3ECFE1"}}>{`-->Disclaimer<--`}</Link>
     </footer>
   );
 }

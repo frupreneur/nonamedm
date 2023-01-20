@@ -25,13 +25,6 @@ export default function Layout({ children }) {
   }, [state, setState]);
   return (
     <>
-      <Head>
-        <title>NoNameDM - Receive Anonymous Secret Messages</title>
-        <link rel="shortcut icon" href="/assets/favicon.ico" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="UTF-8" />
-      </Head>
       <main className={andika.className}>
         <Header />
         <section className="main">{children}</section>

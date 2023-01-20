@@ -133,6 +133,12 @@ button:active,
 .container {
   text-align: center;
 }
+
+p.disclaimer {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
 .main {
   margin-top: auto !important;
 }

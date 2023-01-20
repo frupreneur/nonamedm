@@ -3,17 +3,39 @@ import { addSecretMessage } from "@/db";
 import { useRouter } from "next/router";
 
 export default function SecretMessageForm({ setSent, loading, setLoading }) {
+  const [error, setError] = React.useState(false);
   const textAreaRef = React.useRef();
   const router = useRouter();
 
   async function submitSecretMessage() {
-    setLoading(true);
-    await addSecretMessage(
-      router.query.userId.split("-")[1],
-      textAreaRef.current.value.replace(/[^a-zA-Z0-9 ]/g, "")
-    );
+    if (textAreaRef.current.value.length) {
+      setLoading(true);
+      await addSecretMessage(
+        router.query.userId.split("-")[1],
+        textAreaRef.current.value.replace(/[^a-zA-Z0-9 ]/g, "")
+      );
 
-    setSent(true);
+      setSent(true);
+    } else {
+      setError(true);
+    }
+  }
+
+  React.useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(false);
+      }, 1000);
+    }
+  }, [error, setError]);
+
+  let buttontext;
+  if (loading) {
+    buttontext = "Loading...";
+  } else if (error) {
+    buttontext = "Error: Input Message";
+  } else {
+    buttontext = " Submit Secret Message";
   }
 
   return (
@@ -27,7 +49,7 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
         style={{ backgroundColor: "#29d5de", padding: "0.5rem 1rem" }}
         onClick={submitSecretMessage}
       >
-        {loading ? "Sending..." : " Submit Secret Message"}
+        {buttontext}
       </button>
     </div>
   );
