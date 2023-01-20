@@ -1,5 +1,5 @@
 import React from "react";
-import { FaWhatsapp, FaRegCopy } from "react-icons/fa";
+import { FaWhatsapp, FaRegCopy, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -49,7 +49,23 @@ export default function ShareButtons() {
             className="share-button wa"
           >
             <FaWhatsapp style={{ fontSize: "1.5rem" }} />{" "}
-            <span> Share on WhatsApp</span>
+            <span> {`Set WhatsApp Status `}</span>
+          </Link>
+          <Link
+            href={`https://api.whatsapp.com/send?text=Write a *secret anonymous message* for me…🙂  I *won't know* who wrote it. ${link}`}
+            target="_blank"
+            className="share-button wa"
+          >
+            <FaWhatsapp style={{ fontSize: "1.5rem" }} />{" "}
+            <span> {`Send WhatsApp Message`}</span>
+          </Link>
+          <Link
+            href={`${link}`}
+            target="_blank"
+            className="share-button fb"
+          >
+            <FaFacebook style={{ fontSize: "1.5rem" }} />{" "}
+            <span> {`Share On Facebook`}</span>
           </Link>
           <button className="share-button  copy" onClick={copyToClipboard}>
             <FaRegCopy style={{ fontSize: "1.5rem" }} />{" "}

@@ -21,6 +21,8 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="article" />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
+        <meta property="og:image" content="/og-img.png" />
+
       </Head>
       <Layout>
         <Component {...pageProps} />
