@@ -348,4 +348,8 @@ textarea {
     padding: 0;
     margin: 0.3rem;
   }
+  header > ul > li{
+    padding: 0;
+    margin: 0.6rem;
+  }
 }
