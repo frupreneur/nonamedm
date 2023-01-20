@@ -44,9 +44,8 @@ export default function Header() {
             </li>
             <li
               onClick={() => {
-                localStorage.removeItem("loggedUser");
-                setState((prev) => ({ ...prev, user: { messages: [] } }));
-                router.push("/");
+                setState((prev) => ({ ...prev, logOut: true }));
+                document.documentElement.style = "overflow: hidden !important";
               }}
               style={{ cursor: "pointer" }}
             >

@@ -3,9 +3,10 @@ const AppContext = createContext();
 
 export default function StateProvider({ children }) {
   const [state, setState] = React.useState({
-    user:{},
-    inbox: {loading: true},
-    fetchErr: false
+    user: { messages: [] },
+    inbox: { loading: true },
+    fetchErr: false,
+    logOut: false,
   });
   const [errorFetching, setErrorFetching] = React.useState(false);
 

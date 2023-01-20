@@ -4,6 +4,7 @@ import { getUser } from "@/db";
 import { useGlobalState } from "@/state";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { TiMessages } from "react-icons/ti";
 
 export default function Inbox() {
   const { state, setState } = useGlobalState();
@@ -27,9 +28,19 @@ export default function Inbox() {
           <p>Internet Disconnected</p>
         )
       ) : (
-        <p>{`${
-          state.user.name.charAt(0).toUpperCase() + state.user.name.slice(1)
-        }'s secret messages`}</p>
+        <>
+          <div
+            className="refresh"
+            onClick={() => {
+              router.reload(window.location.pathname);
+            }}
+          >
+            <span>Refresh</span> <TiMessages className="refresh-icon" />
+          </div>
+          <p>{`${
+            state.user.name.charAt(0).toUpperCase() + state.user.name.slice(1)
+          }'s secret messages`}</p>
+        </>
       )}
 
       {!state.inbox.loading && !state.fetchErr && (
@@ -41,13 +52,21 @@ export default function Inbox() {
                 backgroundColor: "#42CDE1",
                 color: "#250933",
                 padding: "0.5rem 1.5rem",
-                marginTop: "1rem",
+                margin: "1rem",
                 letterSpacing: "2px",
               }}
             >
               Share My Link
             </button>{" "}
           </Link>
+          <div
+            className="refresh"
+            onClick={() => {
+              router.reload(window.location.pathname);
+            }}
+          >
+            <span>Refresh</span> <TiMessages className="refresh-icon" />
+          </div>
         </>
       )}
     </div>
