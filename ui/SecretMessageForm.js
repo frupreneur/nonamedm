@@ -31,7 +31,7 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
 
   let buttontext;
   if (loading) {
-    buttontext = "Loading...";
+    buttontext = "Sending...";
   } else if (error) {
     buttontext = "Error: Input Message";
   } else {

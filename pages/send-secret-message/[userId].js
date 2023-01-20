@@ -65,9 +65,13 @@ export default function SendMessage() {
         <div className="card">
           <h2>Secret Message Sent!</h2>
           <p>Thank you for participating.</p>
-          <p>Click below link to generate your secret message link.</p>
+          <p style={{color: "#f51cfd"}}>
+            {`Click below link to generate your secret message link for Free and share with
+            friends. Once your friends send you a secret message, you will see the
+            results. `}
+          </p>
           <Link href="/inbox">
-            <button className="share-button copy">Create Your Own Link</button>
+            <button className="share-button copy">Create Your Own Link </button>
           </Link>
         </div>
       )}
