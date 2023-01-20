@@ -8,7 +8,7 @@ export default function Footer() {
     window.addEventListener("beforeinstallprompt", (e) => {
       setDeferredPrompt(e);
     });
-  });
+  }, [setDeferredPrompt, deferredPrompt]);
 
   async function installApp() {
     if (deferredPrompt !== null) {

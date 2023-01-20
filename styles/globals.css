@@ -25,7 +25,7 @@ body {
   --color-primary-500: #5a097a;
   --color-primary-600: #480264;
   --color-primary-700: #3d0264;
-  --color-primary-800: #ee2afc;
+  --color-primary-800: #ba8809;
 
   --color-success-100: #a2f0bc;
   --color-success-500: #12bd4b;
@@ -33,6 +33,7 @@ body {
   --color-error-100: #f1acc9;
   --color-error-500: #a10c4a;
   --dark-bg: #250933;
+  --color-primary: #f51cfd;
 
   --size-1: 0.25rem;
   --size-2: 0.5rem;
@@ -101,7 +102,7 @@ button,
 .share-button {
   font: inherit;
   cursor: pointer;
-  background: var(--color-primary-800);
+  background: #f51cfd;
   padding: 0.7rem 1rem;
   border-radius: 5px;
   outline: none;
@@ -216,7 +217,7 @@ ul.messages {
 }
 
 ul.messages > li {
-  border: 1px solid var(--color-primary-800);
+  border: 1px solid var(--color-primary);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -348,7 +349,7 @@ textarea {
     padding: 0;
     margin: 0.3rem;
   }
-  header > ul > li{
+  header > ul > li {
     padding: 0;
     margin: 0.6rem;
   }
