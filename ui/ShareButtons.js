@@ -49,7 +49,7 @@ export default function ShareButtons() {
             className="share-button wa"
           >
             <FaWhatsapp style={{ fontSize: "1.5rem" }} />{" "}
-            <span> {`Set WhatsApp Status `}</span>
+            <span> {`Share on WhatsApp Status `}</span>
           </Link>
           <Link
             href={`https://api.whatsapp.com/send?text=Write a *secret anonymous message* for me…🙂  I *won't know* who wrote it. ${link}`}

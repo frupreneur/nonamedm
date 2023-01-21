@@ -25,7 +25,17 @@ export default function Inbox() {
         !state.fetchErr ? (
           <p>Loading Messages...</p>
         ) : (
-          <p>Internet Disconnected</p>
+          <>
+            <p>Error: Please Check Your Internet</p>
+            <div
+              className="refresh"
+              onClick={() => {
+                router.reload(window.location.pathname);
+              }}
+            >
+              <span>Try Again</span>
+            </div>
+          </>
         )
       ) : (
         <>
