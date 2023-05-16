@@ -107,7 +107,7 @@ export default function AboutUsPage() {
             our practices, please contact us at privacy@nonamedm.com.
           </p>
 
-          <p>Last updated: [Date]</p>
+          <p>Last updated: [03/01/2023]</p>
         </article>
       </div>
     </>
