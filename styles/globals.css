@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -390,7 +388,6 @@ textarea {
 }
 
 @media (max-width: 500px) {
-  
   header {
     flex-wrap: wrap;
   }
@@ -405,8 +402,7 @@ textarea {
   .share-button span {
     font-size: 0.65rem !important;
   }
-  .footer-menu{
+  .footer-menu {
     flex-direction: column;
   }
 }
-

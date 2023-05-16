@@ -4,9 +4,9 @@ import { Header, Footer, Meta } from "@/ui";
 import { useGlobalState } from "@/state";
 import { getUser } from "@/db";
 
-import { Andika } from "@next/font/google";
+import { Roboto } from "@next/font/google";
 
-const andika = Andika({
+const andika = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "optional",

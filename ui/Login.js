@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { addDocument } from "@/db";
 
-export default function Login({ addDocument }) {
+export default function Login() {
   const [buttontext, setButtonText] = React.useState("Get Started");
   const loginRef = useRef();
   const router = useRouter();
