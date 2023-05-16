@@ -20,7 +20,7 @@ export default function Header() {
       <ul className="menu">
         {!state.user.name && (
           <li>
-            <Link href="/">Get Started</Link>
+            <Link href="/about">About NoNameDM</Link>
           </li>
         )}
 

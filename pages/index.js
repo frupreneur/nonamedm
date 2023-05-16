@@ -19,6 +19,7 @@ export default function Home() {
       <h1>Receive Secret Anonymous Messages Online</h1>
 
       <Login addDocument={addDocument} />
+
     </div>
   );
 }

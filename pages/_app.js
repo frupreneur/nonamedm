@@ -14,9 +14,9 @@ export default function App({ Component, pageProps }) {
         <title>{title}</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="description" content={description} />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta property="og:title" content={title} />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={description} />

@@ -151,6 +151,8 @@ header {
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #843897;
 }
 header > .logo {
   width: 100%;
@@ -350,7 +352,45 @@ textarea {
   font-size: 0.8rem;
 }
 
+/* footer */
+.footer {
+  width: 100%;
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* background: var(--color-primary-700); */
+  color: white;
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.footer-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.footer-menu a {
+  /* text-decoration: none; */
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-menu a:hover {
+  color: var(--color-primary-300);
+}
+
 @media (max-width: 500px) {
+  
   header {
     flex-wrap: wrap;
   }
@@ -365,4 +405,8 @@ textarea {
   .share-button span {
     font-size: 0.65rem !important;
   }
+  .footer-menu{
+    flex-direction: column;
+  }
 }
+

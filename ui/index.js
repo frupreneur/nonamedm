@@ -6,3 +6,5 @@ export { default as Messages } from "./Messages";
 export { default as ShareButtons } from "./ShareButtons";
 export { default as SecretMessageForm } from "./SecretMessageForm";
 export { default as LogOut } from "./LogOut";
+export { default as Meta } from "./Meta";
+export { default as ContactForm } from "./ContactForm";
