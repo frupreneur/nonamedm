@@ -18,8 +18,19 @@ export default function Messages({ messages }) {
         {messages.map((message) => {
           return (
             <li key={message.date}>
-              <p style={{ fontSize: "0.8rem" }}>{message.message}</p>
-              <p style={{ fontStyle: "italic", fontSize: "0.5rem" , color: "black"}}>
+              <p
+                style={{ fontSize: "0.8rem" }}
+                dangerouslySetInnerHTML={{
+                  __html: message.message.replace(/\n/g, "<br>"),
+                }}
+              ></p>
+              <p
+                style={{
+                  fontStyle: "italic",
+                  fontSize: "0.5rem",
+                  color: "black",
+                }}
+              >
                 {` - ${new Date(message.date)}`}
               </p>
             </li>
