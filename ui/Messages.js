@@ -16,14 +16,15 @@ export default function Messages({ messages }) {
     <div className="card">
       <ul className="messages">
         {messages.map((message) => {
+          const msg = message.message.replace(/\n/g, "<br/>");
           return (
             <li key={message.date}>
-              <p
+              <div
                 style={{ fontSize: "0.8rem" }}
                 dangerouslySetInnerHTML={{
-                  __html: message.message.replace(/\n/g, "<br>"),
+                  __html: msg,
                 }}
-              ></p>
+              ></div>
               <p
                 style={{
                   fontStyle: "italic",
