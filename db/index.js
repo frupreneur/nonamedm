@@ -21,14 +21,6 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDlkoOCD7fsk6USfnJeGU4CvkqNIqpMpbk",
-//   authDomain: "nonamedm.firebaseapp.com",
-//   projectId: "nonamedm",
-//   storageBucket: "nonamedm.appspot.com",
-//   messagingSenderId: "282516255808",
-//   appId: "1:282516255808:web:74440395c1a313078fdba5",
-// };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
@@ -51,11 +43,6 @@ export async function addDocument(userName, userObj) {
       ...userObj,
       uid: uid,
     });
-
-    // const user = await addDoc(collection(db, "users"), {
-    //   ...userObj,
-    //   uid: uid,
-    // });
 
     window.localStorage.setItem(
       "loggedUser",
