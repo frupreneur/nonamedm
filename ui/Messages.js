@@ -19,12 +19,12 @@ export default function Messages({ messages }) {
           const msg = message.message.replace(/\n/g, "<br/>");
           return (
             <li key={message.date}>
-              <div
+              <p
                 style={{ fontSize: "0.8rem" }}
                 dangerouslySetInnerHTML={{
                   __html: msg,
                 }}
-              ></div>
+              ></p>
               <p
                 style={{
                   fontStyle: "italic",
