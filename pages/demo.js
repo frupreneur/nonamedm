@@ -2,7 +2,7 @@ import React from "react";
 import { addSecretMessage } from "@/db";
 import { useRouter } from "next/router";
 
-export default function SecretMessageForm({ setSent, loading, setLoading }) {
+export default function SecretMessageForm() {
   const [error, setError] = React.useState(false);
   const textAreaRef = React.useRef();
   const router = useRouter();
@@ -12,13 +12,7 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
       const sanitizedMessage = textAreaRef.current.value.replace(/[<>]/g, ""); // Remove unsafe characters
       const visibleNewlinesMessage = sanitizedMessage.replace(/\n/g, "\\n"); // Make newlines visible in console
 
-      setLoading(true);
-      await addSecretMessage(
-        router.query.userId.split("-")[1],
-        visibleNewlinesMessage
-      );
-
-      setSent(true);
+      console.log(visibleNewlinesMessage);
     } else {
       setError(true);
     }
@@ -32,14 +26,14 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
     }
   }, [error, setError]);
 
-  let buttontext;
-  if (loading) {
-    buttontext = "Sending...";
-  } else if (error) {
-    buttontext = "Error: Input Message";
-  } else {
-    buttontext = " Submit Secret Message";
-  }
+  //   let buttontext;
+  //   if (loading) {
+  //     buttontext = "Sending...";
+  //   } else if (error) {
+  //     buttontext = "Error: Input Message";
+  //   } else {
+  //     buttontext = " Submit Secret Message";
+  //   }
 
   return (
     <div className="card">
@@ -52,7 +46,7 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
         style={{ backgroundColor: "#29d5de", padding: "0.5rem 1rem" }}
         onClick={submitSecretMessage}
       >
-        {buttontext}
+        Submit Secret Message
       </button>
     </div>
   );
