@@ -12,7 +12,7 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
       setLoading(true);
       await addSecretMessage(
         router.query.userId.split("-")[1],
-        textAreaRef.current.value.replace(/[<>]/g, "")
+        textAreaRef.current.value.replace(/[<>](?!\n|\r\n)/g, "")
       );
 
       setSent(true);
