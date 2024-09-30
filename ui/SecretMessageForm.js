@@ -10,12 +10,11 @@ export default function SecretMessageForm({ setSent, loading, setLoading }) {
   async function submitSecretMessage() {
     if (textAreaRef.current.value.length) {
       const sanitizedMessage = textAreaRef.current.value.replace(/[<>]/g, ""); // Remove unsafe characters
-      const visibleNewlinesMessage = sanitizedMessage.replace(/\n/g, "\\n"); // Make newlines visible in console
 
       setLoading(true);
       await addSecretMessage(
         router.query.userId.split("-")[1],
-        visibleNewlinesMessage
+        sanitizedMessage
       );
 
       setSent(true);
